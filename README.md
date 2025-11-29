@@ -1,6 +1,5 @@
 # Front-end-Frameworks-Trabalho-Final
 
-🚀 Como Usar
 Descompacte a pasta do projeto
 
 Abra no VSCode (Arquivo → Abrir Pasta)
