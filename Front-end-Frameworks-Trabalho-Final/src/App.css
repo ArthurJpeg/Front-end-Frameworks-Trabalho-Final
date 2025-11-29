@@ -1,0 +1,380 @@
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #333;
+  background-color: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.App {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+header h1 {
+  font-size: 2.8em;
+  color: white;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+header h1::after {
+  content: ' 🍳';
+}
+
+.container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.coluna {
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.coluna h2 {
+  color: #4a5568;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.5em;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+.form-add {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-add input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-add input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+button {
+  border-radius: 8px;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+button:disabled {
+  background: #cbd5e0;
+  transform: none;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.lista-ingredientes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-ingredientes li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background: #f7fafc;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  transition: transform 0.2s;
+}
+
+.lista-ingredientes li:hover {
+  transform: translateX(4px);
+}
+
+.lista-ingredientes li span {
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.btn-delete {
+  background: none;
+  color: #e53e3e;
+  border: none;
+  font-size: 1.5em;
+  padding: 0 0.5rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+  box-shadow: none;
+}
+
+.btn-delete:hover {
+  background: #fed7d7;
+  transform: scale(1.1);
+}
+
+.receita-resultado {
+  background: #f7fafc;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 1.5rem;
+  border: 1px solid #e2e8f0;
+  white-space: pre-wrap;
+}
+
+.receita-resultado h3 {
+  color: #667eea;
+  margin-top: 0;
+}
+
+.receita-resultado strong {
+  color: #4a5568;
+}
+
+.receita-resultado ul, .receita-resultado ol {
+  text-align: left;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e2e8f0;
+  border-top: 4px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 1rem auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  header h1 {
+    font-size: 2.2em;
+  }
+  
+  .coluna {
+    min-width: auto;
+  }
+}
+
+.login-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: white;
+}
+
+.login-header h1 {
+  font-size: 2.8em;
+  margin: 0 0 1rem 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.login-header p {
+  font-size: 1.2em;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.simple-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.page-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.app-nav {
+  padding: 1rem;
+  background: white;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .login-header h1 {
+    font-size: 2.2em;
+  }
+  
+  .login-header p {
+    font-size: 1em;
+  }
+}
+
+.settings-container {
+  max-width: 480px;
+  margin: 3rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.settings-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #4a5568;
+  margin: 0;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+.settings-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.settings-label {
+  font-size: 1rem;
+  color: #4a5568;
+  font-weight: 600;
+}
+
+.settings-input {
+  padding: 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.settings-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.settings-button-back {
+  margin-top: 1rem;
+  background: #4a5568 !important;
+  box-shadow: none !important;
+}
+
+.settings-button-back:hover {
+  background: #2d3748 !important;
+  transform: translateY(-2px);
+}
+
+.app-nav {
+  padding: 1rem;
+  background: white;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 12px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn-secondary {
+  background: #48bb78 !important;
+}
+
+.nav-btn-secondary:hover {
+  background: #38a169 !important;
+}
+
+.nav-btn-logout {
+  background: #e53e3e !important;
+}
+
+.nav-btn-logout:hover {
+  background: #c53030 !important;
+}
+
+@media (max-width: 768px) {
+  .app-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .nav-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .nav-buttons button {
+    width: 100%;
+  }
+  
+  .nav-btn-logout {
+    width: 100%;
+  }
+}
