@@ -14,7 +14,7 @@ Clique no link que aparecer no terminal
 
 Pronto! A aplicação abre no navegador
 
-📱 Para Logar
+Para Logar
 Use qualquer email/senha (é simulado)
 
 Ou clique em "Cadastre-se" para criar conta
