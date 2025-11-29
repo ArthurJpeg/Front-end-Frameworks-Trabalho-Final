@@ -1,21 +1,18 @@
 # Front-end-Frameworks-Trabalho-Final
 
-Descompacte a pasta do projeto
+1. Descompacte a pasta do projeto
 
-Abra no VSCode (Arquivo → Abrir Pasta)
+2. Abra no VSCode (Arquivo → Abrir Pasta)
 
-Abra o terminal no VSCode (Ctrl + ')
+3. Abra o terminal no VSCode (Ctrl + ')
 
-Digite: npm install (espera baixar tudo)
+4. Digite: npm install
 
-Digite: npm run dev
+5. Digite: npm install vite @vitejs/plugin-react
 
-Clique no link que aparecer no terminal
+6. Digite: npm run dev
+
+7. Clique no link que aparecer no terminal
 
 Pronto! A aplicação abre no navegador
-
-Para Logar
-Use qualquer email/senha (é simulado)
-
-Ou clique em "Cadastre-se" para criar conta
 
